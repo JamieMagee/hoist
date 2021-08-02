@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0@sha256:4763240791cd850c6803964c38ec22d88b259ac7c127b4ad1000a4fd41a08e01 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0@sha256:8a628b0b3b26e8827dca4113c36d9594a0a5bc2214fd7bae46eb5b48f7b677ba AS build
 WORKDIR /src
 COPY ["WebApplication/WebApplication.csproj", "WebApplication/"]
 RUN dotnet restore "WebApplication/WebApplication.csproj"
