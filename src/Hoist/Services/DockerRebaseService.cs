@@ -64,6 +64,8 @@ namespace Hoist.Services
             // Replace History
             newImageConfig.History = newBaseImageConfig.History.Concat(_imageConfig.History.Where(history =>
                 !currentBaseImageConfig.History.Contains(history))).ToList();
+            
+            // TODO: Replace labels
 
             return newImageConfig;
         }
