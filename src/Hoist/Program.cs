@@ -8,7 +8,7 @@ using Spectre.Cli.Extensions.DependencyInjection;
 using Spectre.Console.Cli;
 
 var configuration = new ConfigurationBuilder()
-    .AddUserSecrets<DefaultCommand>()
+    .AddJsonFile("hoist.json")
     .Build();
 var serviceCollection = new ServiceCollection()
     .Configure<DockerRegistrySettings>(configuration)

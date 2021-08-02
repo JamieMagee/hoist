@@ -2,6 +2,8 @@
 
 Rebase a Docker image onto a new base image.
 
+## Options
+
 ```sh
 USAGE:
     hoist <REGISTRY> [OPTIONS]
@@ -23,3 +25,7 @@ OPTIONS:
     -n, --base-name-label [BASE_NAME_LABEL]        The base image name label to use. Defaults to org.opencontainers.image.base.name
     -d, --base-digest-label [BASE_DIGEST_LABEL]    The base image digest label to use. Defaults to org.opencontainers.image.base.digest
 ```
+
+## Authentication
+
+Authentication for each registry can be defined in a `hoist.json` file located beside the app. See [`hoist.sample.json`](src/Hoist/hoist.sample.json) for an example.

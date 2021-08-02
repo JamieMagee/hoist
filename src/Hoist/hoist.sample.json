@@ -1,0 +1,8 @@
+{
+  "dockerRegistries": {
+    "hoist.azurecr.io": {
+      "username": "...",
+      "password": "..."
+    }
+  }
+}
