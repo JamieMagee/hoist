@@ -17,6 +17,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ubuntu", "ubuntu", "{C844BE81-037B-4A5A-85E6-C4B48FA41D40}"
 ProjectSection(SolutionItems) = preProject
 	demo\ubuntu\Dockerfile = demo\ubuntu\Dockerfile
+	demo\ubuntu\my-app.sh = demo\ubuntu\my-app.sh
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotnet", "dotnet", "{A4CAB45A-AE63-4B52-9F82-3EC910F5F580}"
