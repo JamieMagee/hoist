@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Hoist.Models.Registry.Config
 {
-    public class Config
+    public record Config
     {
         [JsonPropertyName("User")]
         public string User { get; init; }

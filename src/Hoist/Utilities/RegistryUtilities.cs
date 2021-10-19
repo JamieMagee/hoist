@@ -6,7 +6,7 @@ namespace Hoist.Utilities
 {
     public static class RegistryUtilities
     {
-        public static RegistryHost GetRegistryHost(string uri)
+        private static RegistryHost GetRegistryHost(string uri)
         {
             if (uri.Contains("azurecr.io"))
             {

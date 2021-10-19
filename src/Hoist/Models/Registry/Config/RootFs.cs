@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Hoist.Models.Registry.Config
 {
-    public class RootFs
+    public record RootFs
     {
         [JsonPropertyName("diff_ids")]
         public List<string> DiffIds { get; set; }

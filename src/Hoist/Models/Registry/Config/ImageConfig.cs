@@ -5,9 +5,9 @@ namespace Hoist.Models.Registry.Config
 {
     /// <summary>
     /// Image is the JSON structure which describes some basic information about the image.
-    /// This provides the <code>application/vnd.docker.container.image.v1+json</code> mediatype when marshalled to JSON
+    /// This provides the <code>application/vnd.docker.container.image.v1+json</code> media type when marshalled to JSON
     /// </summary>
-    public class ImageConfig
+    public record ImageConfig
     {
         /// <summary>
         /// Created is the combined date and time at which the image was created, formatted as defined by RFC 3339, section 5.6.

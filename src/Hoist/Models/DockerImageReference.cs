@@ -5,10 +5,6 @@ namespace Hoist.Models
 {
     public sealed class DockerImageReference
     {
-        public DockerImageReference()
-        {
-        }
-
         public string Host { get; set; }
 
         public string Repository { get; set; }
@@ -17,7 +13,7 @@ namespace Hoist.Models
 
         public string Digest { get; set; }
 
-        public static DockerImageReference Parse(string reference, [CanBeNull] string digest)
+        public static DockerImageReference Parse(string reference, string digest)
         {
             var dockerImageReference = new DockerImageReference();
             var i = reference.IndexOf('/');

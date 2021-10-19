@@ -64,20 +64,20 @@ namespace Hoist.Services
             return (digest, size);
         }
 
-        public async Task<Stream> DownloadLayer(string repostoryName, string reference)
+        public async Task<Stream> DownloadLayer(string repositoryName, string reference)
         {
-            var response = await _client.Blobs.GetBlobAsync(repostoryName, reference);
+            var response = await _client.Blobs.GetBlobAsync(repositoryName, reference);
             var stream = new MemoryStream();
             await response.Stream.CopyToAsync(stream);
             stream.Seek(0, SeekOrigin.Begin);
             return stream;
         }
 
-        public async Task UploadLayer(string repostoryName, int contentLength, Stream stream, string digest)
+        public async Task UploadLayer(string repositoryName, int contentLength, Stream stream, string digest)
         {
             try
             {
-                await _client.BlobUploads.UploadBlobAsync(repostoryName, contentLength, stream, digest);
+                await _client.BlobUploads.UploadBlobAsync(repositoryName, contentLength, stream, digest);
             }
             catch (Exception e)
             {
@@ -97,7 +97,7 @@ namespace Hoist.Services
             var manifest = JsonSerializer.Deserialize<Index>(response.Content);
             response = await _client.Manifest.GetManifestAsync(
                 repositoryName,
-                manifest.Manifests.Single(m => m.Platform.Architecture == architecture && m.Platform.OS == os).Digest
+                manifest.Manifests.Single(m => m.Platform.Architecture == architecture && m.Platform.Os == os).Digest
             );
             return JsonSerializer.Deserialize<Manifest>(response.Content);
         }

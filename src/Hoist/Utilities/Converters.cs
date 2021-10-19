@@ -13,7 +13,7 @@ namespace Hoist.Utilities
             {
                 Digest = manifest.Config.Digest,
                 Size = manifest.Config.Size,
-                Urls = manifest.Config.URLs?.ToArray(),
+                Urls = manifest.Config.Urls?.ToArray(),
                 MediaType = manifest.Config.MediaType
             };
 
@@ -21,7 +21,7 @@ namespace Hoist.Utilities
                 {
                     Digest = layer.Digest,
                     Size = layer.Size,
-                    Urls = layer.URLs?.ToArray(),
+                    Urls = layer.Urls?.ToArray(),
                     MediaType = layer.MediaType
                 })
                 .ToList();

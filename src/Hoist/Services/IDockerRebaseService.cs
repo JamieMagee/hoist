@@ -12,7 +12,7 @@ namespace Hoist.Services
 
         Task<bool> IsNewBaseImageAvailableAsync();
 
-        IAsyncEnumerable<(Stream layer, int size, string digest)> DownloadNewLayersAsync(Manifest manifest, ImageConfig config);
+        IAsyncEnumerable<(Stream layer, int size, string digest)> DownloadNewLayersAsync();
         
         Task<ImageConfig> GenerateNewImageConfig();
 

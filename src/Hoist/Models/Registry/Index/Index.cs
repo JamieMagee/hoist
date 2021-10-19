@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Hoist.Models.Registry.Index
 {
-    public class Index
+    public record Index
     {
         /// <summary>
         /// 

@@ -16,9 +16,9 @@ namespace Hoist.Services
 
         Task<ImageConfig> GetConfig(string repositoryName, string reference);
 
-        Task<Stream> DownloadLayer(string repostoryName, string reference);
+        Task<Stream> DownloadLayer(string repositoryName, string reference);
 
-        Task UploadLayer(string repostoryName, int contentLength, Stream stream, string digest);
+        Task UploadLayer(string repositoryName, int contentLength, Stream stream, string digest);
 
         Task UploadManifest(string repositoryName, string reference, Manifest manifest);
 

@@ -68,7 +68,7 @@ namespace Hoist.Commands
 
                         _logger.LogInformation("Updated tag available");
 
-                        await foreach (var (layer, size, digest) in rebaseService.DownloadNewLayersAsync(manifest, config))
+                        await foreach (var (layer, size, digest) in rebaseService.DownloadNewLayersAsync())
                         {
                             _logger.LogInformation($"Uploading new layer with digest {digest}");
                             await registryService.UploadLayer(repository, size, layer, digest);

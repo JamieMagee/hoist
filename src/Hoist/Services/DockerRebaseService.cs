@@ -88,7 +88,7 @@ namespace Hoist.Services
             return newImageManifest;
         }
 
-        public async IAsyncEnumerable<(Stream layer, int size, string digest)> DownloadNewLayersAsync(Manifest manifest, ImageConfig config)
+        public async IAsyncEnumerable<(Stream layer, int size, string digest)> DownloadNewLayersAsync()
         {
             var newBaseImageManifest = await _registryService.GetTagManifestAsync(_imageReference.Repository, _imageReference.Tag);
             foreach (var layer in newBaseImageManifest.Layers)

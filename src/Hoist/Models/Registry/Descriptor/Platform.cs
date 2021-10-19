@@ -2,7 +2,7 @@
 
 namespace Hoist.Models.Registry.Descriptor
 {
-    public class Platform
+    public record Platform
     {
         /// <summary>
         /// 
@@ -14,7 +14,7 @@ namespace Hoist.Models.Registry.Descriptor
         ///
         /// </summary>
         [JsonPropertyName("os")]
-        public string OS { get; init; }
+        public string Os { get; init; }
         
         /// <summary>
         /// 

@@ -5,10 +5,10 @@ namespace Hoist.Models.Registry.Descriptor
 {
     /// <summary>
     /// Descriptor describes the disposition of targeted content.
-    /// This structure provides <code>application/vnd.oci.descriptor.v1+json</code> mediatype
+    /// This structure provides <code>application/vnd.oci.descriptor.v1+json</code> media type
     /// when marshalled to JSON.
     /// </summary>
-    public class Descriptor
+    public record Descriptor
     {
         /// <summary>
         /// MediaType is the media type of the object this schema refers to.
@@ -30,7 +30,7 @@ namespace Hoist.Models.Registry.Descriptor
         /// URLs specifies a list of URLs from which this object MAY be downloaded
         /// </summary>
         [JsonPropertyName("urls")]
-        public IEnumerable<string> URLs { get; set; }
+        public IEnumerable<string> Urls { get; set; }
 
         // Annotations contains arbitrary metadata relating to the targeted content.
         [JsonPropertyName("annotations")]
@@ -42,16 +42,5 @@ namespace Hoist.Models.Registry.Descriptor
         /// </summary>
         [JsonPropertyName("platform")]
         public Platform Platform { get; init; }
-
-        public override bool Equals(object? obj)
-        {
-            if (obj == null || GetType() != obj.GetType())
-            {
-                return false;
-            }
-
-            var d = (Descriptor)obj;
-            return Digest == d.Digest;
-        }
     }
 }

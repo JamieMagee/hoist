@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Hoist.Models.Registry.Manifest
 {
-    public class Manifest
+    public record Manifest
     {
         /// <summary>
         /// 

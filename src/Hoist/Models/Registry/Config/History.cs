@@ -1,9 +1,8 @@
-﻿using System;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace Hoist.Models.Registry.Config
 {
-    public class History
+    public record History
     {
         [JsonPropertyName("created")]
         public string Created { get; set; }
@@ -19,35 +18,5 @@ namespace Hoist.Models.Registry.Config
         
         [JsonPropertyName("empty_layer")]
         public bool? EmptyLayer { get; set; }
-        
-        public override bool Equals(object? obj)
-        {
-            if (ReferenceEquals(null, obj))
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-
-            if (obj.GetType() != GetType())
-            {
-                return false;
-            }
-
-            return Equals((History)obj);
-        }
-
-        protected bool Equals(History other)
-        {
-            return Created == other.Created && CreatedBy == other.CreatedBy;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Created, CreatedBy);
-        }
     }
 }
