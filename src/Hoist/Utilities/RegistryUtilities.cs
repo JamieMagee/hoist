@@ -1,4 +1,4 @@
-﻿using Docker.Registry.DotNet.Authentication;
+﻿using Docker.Registry.Client.Authentication;
 using Hoist.Models;
 using Hoist.Models.Settings;
 

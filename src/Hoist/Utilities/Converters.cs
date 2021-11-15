@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Docker.Registry.DotNet.Models;
+using Docker.Registry.Client.Models;
 using Manifest = Hoist.Models.Registry.Manifest.Manifest;
 
 namespace Hoist.Utilities

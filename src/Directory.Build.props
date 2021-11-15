@@ -1,0 +1,41 @@
+<Project>
+    <PropertyGroup Condition="'$(Configuration)'=='Release'">
+        <PublishTrimmed>true</PublishTrimmed>
+        <TrimMode>link</TrimMode>
+        <PublishSingleFile>true</PublishSingleFile>
+        <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+        <DebugType>None</DebugType>
+        <DebugSymbols>False</DebugSymbols>
+    </PropertyGroup>
+
+    <Choose>
+        <When Condition="'$(OS)' == 'Windows_NT'">
+            <PropertyGroup>
+                <IsWindows>true</IsWindows>
+            </PropertyGroup>
+        </When>
+        <When Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">
+            <PropertyGroup>
+                <IsOSX>true</IsOSX>
+            </PropertyGroup>
+        </When>
+        <Otherwise>
+            <PropertyGroup>
+                <IsLinux>true</IsLinux>
+            </PropertyGroup>
+        </Otherwise>
+    </Choose>
+
+    <PropertyGroup Condition="'$(IsWindows)' == 'true' and '$(RuntimeIdentifier)' == ''">
+        <_UsingDefaultRuntimeIdentifier>true</_UsingDefaultRuntimeIdentifier>
+        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(IsLinux)' == 'true' and '$(RuntimeIdentifier)' == ''">
+        <_UsingDefaultRuntimeIdentifier>true</_UsingDefaultRuntimeIdentifier>
+        <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(IsOSX)' == 'true' and '$(RuntimeIdentifier)' == ''">
+        <_UsingDefaultRuntimeIdentifier>true</_UsingDefaultRuntimeIdentifier>
+        <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
+    </PropertyGroup>
+</Project>

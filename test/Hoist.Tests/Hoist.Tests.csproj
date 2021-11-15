@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Hoist\Hoist.csproj" />
+      <ProjectReference Include="..\..\src\Hoist\Hoist.csproj" />
     </ItemGroup>
 
 </Project>
