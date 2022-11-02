@@ -4,7 +4,7 @@ using Hoist.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Spectre.Cli.Extensions.DependencyInjection;
+using Spectre.Console.Cli.Extensions.DependencyInjection;
 using Spectre.Console.Cli;
 
 var configuration = new ConfigurationBuilder()
