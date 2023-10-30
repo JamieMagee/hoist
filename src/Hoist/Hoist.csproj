@@ -15,7 +15,7 @@
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
-        <PackageReference Include="Spectre.Console.Cli.Extensions.DependencyInjection" Version="0.1.0" />
+        <PackageReference Include="Spectre.Console.Cli.Extensions.DependencyInjection" Version="0.2.0" />
         <PackageReference Include="Spectre.Console" Version="0.47.0" />
         <PackageReference Include="Spectre.Console.CLi" Version="0.47.0" />
     </ItemGroup>
